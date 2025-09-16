@@ -1,0 +1,238 @@
+.main-card {
+  height: 50vh;
+  width: 65vw;
+  border-radius: 20px;
+  display: flex;
+  padding: 0px 30px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/bg-card.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.main-card-book img {
+  width: 200px;
+  height: 290px;
+  border: 10px solid rgb(172, 131, 77);
+}
+
+.main-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 20px;
+  color: white;
+}
+
+.trending-now {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.trending-now button,
+.main-category button {
+  border-radius: 20px;
+  background-color: rgb(153, 147, 126);
+  color: white;
+  display: flex;
+  padding: 2px 20px;
+  gap: 5px;
+  border: none;
+}
+
+.main-category {
+  display: flex;
+  gap: 20px;
+}
+
+.trending-now button img {
+  width: 17px;
+  height: 18px;
+}
+
+.main-bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.left-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.read-book button {
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: white;
+  border: none;
+}
+
+.read-book a {
+    text-decoration: none;
+    color: black;
+}
+
+.transparent-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.transparent-buttons button {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transparent-buttons button img {
+  display: flex;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+}
+
+.discover-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.discover-arrow-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: transparent;
+}
+
+.discover-arrow-buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.discover-arrow-buttons button img {
+  width: 30px;
+  height: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* --- Responsividade do Main Card --- */
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  .main-card {
+    width: 80vw; /* aumenta levemente para caber melhor */
+    height: 55vh;
+    padding: 0 20px;
+  }
+
+  .main-card-book img {
+    width: 180px;
+    height: 260px;
+  }
+
+  .main-card-info {
+    gap: 25px;
+    margin: 15px;
+  }
+}
+
+/* Tablets/Smartphones médios */
+@media (max-width: 768px) {
+  .main-card {
+    flex-direction: column; /* coloca a imagem acima das infos */
+    width: 90vw;
+    height: auto; /* ajusta altura automaticamente */
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .main-card-book img {
+    width: 160px;
+    height: 240px;
+  }
+
+  .main-card-info {
+    margin: 0;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .trending-now,
+  .main-category,
+  .main-bottom-buttons,
+  .discover-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .discover-arrow-buttons {
+    justify-content: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Smartphones pequenos */
+@media (max-width: 480px) {
+  .main-card {
+    width: 95%;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .main-card-book img {
+    width: 140px;
+    height: 210px;
+  }
+
+  .main-card-info {
+    gap: 15px;
+  }
+
+  .trending-now button,
+  .main-category button {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+
+  .main-bottom-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .discover-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .discover-arrow-buttons button img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .cards {
+    flex-direction: column;
+    margin-right: 20px;
+    gap: 15px;
+  }
+}

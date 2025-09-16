@@ -1,0 +1,136 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 12px 30px;
+  position: relative;
+}
+
+.logo h1 {
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-nav a {
+  padding: 8px 25px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.menu-nav a:hover {
+  background-color: rgb(65, 178, 243);
+  color: white;
+  padding: 8px 25px;
+  border-radius: 20px;
+}
+
+.menu-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.notification-night-mode {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.notification-night-mode button {
+  background-color: rgb(65, 178, 243);
+  border-radius: 100%;
+  border: none;
+  padding: 2px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.notification-night-mode button:hover {
+  background-color: aquamarine;
+}
+
+.notification-night-mode button img {
+  width: 15px;
+}
+
+.menu-profile {
+  display: flex;
+  align-items: center;
+}
+
+.menu-profile button {
+  background-color: rgb(65, 178, 243);
+  padding: 8px 25px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-profile button:hover {
+  background-color: aquamarine;
+}
+
+/* --- Botão hamburger --- */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fff;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    /* Inicialmente escondido */
+    display: none;
+  }
+
+  /* Só aparece quando abrir */
+  .menu.open {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-icons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-profile button {
+    width: 100%;
+  }
+}

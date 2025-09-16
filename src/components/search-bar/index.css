@@ -1,0 +1,104 @@
+.search-bar {
+  position: relative; /* 🔹 essencial para dropdown */
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  margin: 20px auto; 
+  box-sizing: border-box;
+}
+
+.search-results {
+  position: absolute;       /* já estava certo */
+  top: calc(100% + 4px);   /* abaixo do input, com pequena margem */
+  left: 50%;               /* centraliza horizontalmente */
+  transform: translateX(-61%); /* centraliza exatamente em relação ao input */
+  width: 65vw;             /* mesma largura do input */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 999;          
+  padding: 0;
+  list-style: none;
+}
+
+
+.search-results li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.search-results li:hover {
+  background-color: #f2f2f2;
+}
+
+
+.search-bar input { 
+  min-width: 220px;     
+  width: 65vw;      
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-align: center;     
+}
+
+/* mantém os botões compactos, sem forçar quebra de linha */
+.search-bar button {
+  padding: 10px 16px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap; /* evita quebra de texto dentro do botão */
+  cursor: pointer;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 1024px) {
+  .search-bar input {
+    flex: 0 1 70%;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;   /* input em cima, botões embaixo */
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;      /* ocupa toda a largura do container */
+    flex: none;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .search-bar button {
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .search-bar input {
+    width: 95%;
+    font-size: 14px;
+  }
+
+  .search-bar button {
+    width: 95%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

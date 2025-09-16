@@ -1,0 +1,164 @@
+.card {
+  margin-top: 40px;
+  position: relative; /* necessário para o ::before funcionar */
+  width: 300px;
+  height: 320px;
+  background-image: url("../../assets/lord-book.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 15px;
+  overflow: hidden; /* garante que o overlay não passe dos cantos arredondados */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-title {
+  color: rgb(206, 159, 5);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* overlay preto com transparência */
+  border-radius: 20px;
+  z-index: 0; /* fica atrás do texto */
+}
+
+.card * {
+  position: relative;
+  z-index: 1; /* mantém o texto acima do overlay */
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 300px;
+}
+
+.card-button button {
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2); /* branco 20% */
+  color: white; /* mantém o texto legível */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* opcional, contorno suave */
+  backdrop-filter: blur(4px); /* efeito “vidro fosco” opcional */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-button button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* um pouco mais branco no hover */
+}
+
+.card-info-movie p {
+  font-weight: 200;
+}
+
+.award {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+}
+
+.award p {
+  font-weight: 400;
+}
+
+.award img {
+  height: 25px;
+  width: 25px;
+}
+
+.budget-revenue {
+  display: flex;
+  justify-content: space-between;
+}
+
+.budget h4,
+.revenue h4 {
+  font-weight: 500;
+}
+
+.budget p,
+.revenue p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+/* --- Responsividade do card --- */
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  .card {
+    width: 280px;
+    height: 300px;
+    margin: 20px auto; /* centraliza horizontalmente */
+  }
+
+  .card-info h3 {
+    width: 100%;
+  }
+}
+
+/* Tablets/Smartphones médios */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;      /* ocupa quase toda a largura do container */
+    max-width: 400px;
+    height: auto;    /* altura ajusta automaticamente ao conteúdo */
+    margin: 20px auto; /* centralizado */
+    padding: 15px;
+  }
+
+  .card-info h3 {
+    width: 100%;
+    text-align: center; /* garante centralização do título */
+  }
+
+  .card-button button {
+    width: 100%;
+  }
+}
+
+/* Smartphones pequenos */
+@media (max-width: 480px) {
+  .card {
+    width: 95%;
+    height: auto;
+    margin: 15px auto; /* mantém centralização */
+    padding: 12px;
+  }
+
+  .card-info h3 {
+    font-size: 1rem;
+  }
+
+  .award img {
+    height: 20px;
+    width: 20px;
+  }
+}

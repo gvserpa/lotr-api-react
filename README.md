@@ -48,36 +48,43 @@ The project demonstrates how to fetch and display data from an external API, man
 
 1. Clone the repository:
 
-```bash
+```
 git clone https://github.com/gvserpa/lotr-api-react.git
 cd lotr-api-react
+```
 
 2. Install dependencies:
 
+```
 npm install
 # or
 yarn install
+```
 
 3. Create a .env file in the root directory:
 
+```
 REACT_APP_API_URL=https://the-one-api.dev/v2
 REACT_APP_API_KEY=your_api_key_here
+```
 
 4. Start the development server:
 
+```
 npm start      # if using CRA
 npm run dev    # if using Vite
+```
 
 5. Open the app in your browser:
 
+```
 CRA: http://localhost:3000
 
 Vite: http://localhost:5173
+```
 
 ---
 
-For full access to the source code, documentation, and setup instructions, visit:
-https://github.com/gvserpa/lotr-api-react/
 
 
 

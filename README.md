@@ -8,7 +8,7 @@ The project demonstrates how to fetch and display data from an external API, man
 
 ## Live Demo
 
-Check out the live version of this project on Vercel: [lotr-api.vercel.app](https://lotr-api.vercel.app)
+Check out the live version of this project on Vercel: [https://lotr-api.vercel.app](https://lotr-api-react.vercel.app/)
 
 This is a React-based API consumer designed to explore and display information from The One API, which provides detailed data about the Lord of the Rings universe.
 

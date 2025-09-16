@@ -51,45 +51,34 @@ The project demonstrates how to fetch and display data from an external API, man
 ```bash
 git clone https://github.com/gvserpa/lotr-api-react.git
 cd lotr-api-react
-Install dependencies:
 
-bash
-Copy code
+2. Install dependencies:
+
 npm install
 # or
 yarn install
-Create a .env file in the root directory:
 
-env
-Copy code
+3. Create a .env file in the root directory:
+
 REACT_APP_API_URL=https://the-one-api.dev/v2
 REACT_APP_API_KEY=your_api_key_here
-Start the development server:
 
-bash
-Copy code
-npm start
-# or, if using Vite
-npm run dev
-Open http://localhost:3000 (CRA) or http://localhost:5173 (Vite) in your browser to view the project.
+4. Start the development server:
 
-Deployment
-This project can be deployed on Vercel:
+npm start      # if using CRA
+npm run dev    # if using Vite
 
-Log in to Vercel and click New Project → Import Git Repository.
+5. Open the app in your browser:
 
-Select the repository lotr-api-react.
+CRA: http://localhost:3000
 
-Configure build settings (React is auto-detected).
+Vite: http://localhost:5173
 
-Add Environment Variables:
+---
 
-ini
-Copy code
-REACT_APP_API_URL=https://the-one-api.dev/v2
-REACT_APP_API_KEY=your_api_key_here
-Click Deploy and wait for the live URL.
-
-GitHub Repository
-For full access to the source code, documentation, and setup instructions, visit the repository:
+For full access to the source code, documentation, and setup instructions, visit:
 https://github.com/gvserpa/lotr-api-react/
+
+
+
+
